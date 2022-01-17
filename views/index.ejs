@@ -510,6 +510,16 @@ Explore the hall, booth, and a tons of event, webinar, and talkshows now.</p>
         Copyright &copy; 2021 PT. SYNNEX METRODATA INDONESIA
     </div>
 </section>
+<div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body px-0 pb-0 pt-3 position-relative">
+                <button type="button" class="btn-close bg-danger text-white position-absolute top-0 start-100 translate-middle" data-bs-dismiss="modal" aria-label="Close"></button>
+                <img onclick="onclickModalEvent()" style="cursor: pointer;" src="/img/KOM_ME_nexworld.jpg" class="img-fluid rounded" alt="event-image">
+            </div>
+        </div>
+    </div>
+</div>
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -670,6 +680,15 @@ function registerSubmit() {
         .catch(error => {
             showRedAlert('#register-alert', error.message)
         })
+}
+
+$(window).on('load', function() {
+    $('#eventModal').modal('show');
+});
+
+function onclickModalEvent() {
+    $('#eventModal').modal('hide');
+    $('#loginModal').modal('show');
 }
 </script>
 <script src="//code.tidio.co/3qybz2lbj3jahojo1axp3nhi9rf7dqdo.js" async></script>
